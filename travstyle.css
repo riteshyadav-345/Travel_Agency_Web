@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4682B4;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+header nav ul li {
+    margin-right: 50px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.hero {
+    background-image: url('hero-banner.jpg');
+    background-size: cover;
+    height: 100vh;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: top;
+    font: size 6px;;
+   
+}
+
+.hero h1 {
+    font-size: 60px;
+    text-align: center;
+    text-align: up;
+   text-overflow: inherit;
+   margin-top: 50px;
+}
+
+
+
+.nav-search {
+    
+    /*justify-content: space-evenly;*/
+    background-color:#d7c8a8;
+    width: 400px;
+    height: 40px;
+    border-radius:6px;
+    margin-left: 24px;
+   margin-top:0.5px;
+}
+
+
+
+
+
+.destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    object-fit: contain;
+}
+
+.destination-card {
+    height: 100%;
+    width: 30%;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+  
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.destination-card h3 {
+    font-size: 24px;
+    margin: 10px;
+    object-fit: contain;
+}
+
+.destination-card p {
+    margin: 10px;
+    color: #666;
+}
+
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.package-card {
+    height:10%;
+    width: 30%;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    object-fit: cover;
+}
+
+.package-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    background-image: cover;
+}
+
+.package-card h3 {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.package-card p {
+    margin: 10px;
+    color: #666;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-card {
+    text-align: center;
+    width: 30%;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.testimonial-card p {
+    margin: 10px;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+button {
+    background-color: skyblue;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    background-color:rgb(219, 217, 180);
+    
+    text-align: right;
+}
+
+.foot-panel2 {
+    background-color:#222f3d ;
+    color:white ;
+    height:400px ;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+
+
+
+
+.nav-search {
+    position: relative;
+    display: inline-block;
+}
+
+.search-input {
+    padding: 10px 40px 10px 10px; /* Adjust padding to make space for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none; /* Prevents the icon from blocking input clicks */
+}
+
+.search-icon i {
+    font-size: 18px;
+}
+
+
+.travel-tips {
+    background-color: #f9f9f9; /* Adjust background color to match the theme */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.travel-tips h2 {
+    color: #2c3e50; /* Adjust this color to match the theme */
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.travel-tips ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.travel-tips li {
+    color: #7f8c8d; /* Adjust this color to match the theme */
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.travel-tips li::before {
+    content: "\f00c"; /* Font Awesome check icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #3498db; /* Adjust this color to match the theme */
+}
+
+
+

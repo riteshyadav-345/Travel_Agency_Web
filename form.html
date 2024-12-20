@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Travel</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  
+  <div class="container">
+    <h1>Book Your Travel Destination</h1>
+    <form id="myForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile No:</label>
+        <input type="text" id="mobile" name="mobile">
+        <span id="mobileError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <span id="ageError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="departure">Departure Date:</label>
+        <input type="date" id="departure" name="departure">
+        <span id="departureError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="departure">Return Date:</label>
+        <input type="date" id="return" name="return">
+        <span id="returnError" class="error"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination">
+        <span id="destinationError" class="error"></span>
+      </div>
+
+      <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      // Clear previous error messages
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("mobileError").textContent = "";
+      document.getElementById("ageError").textContent = "";
+      document.getElementById("departureError").textContent = "";
+      document.getElementById("destinationError").textContent = "";
+
+      let isValid = true;
+
+      // Name validation
+      const name = document.getElementById("name").value.trim();
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        isValid = false;
+      }
+
+      // Email validation
+      const email = document.getElementById("email").value.trim();
+      const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required.";
+        isValid = false;
+      } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format.";
+        isValid = false;
+      }
+
+      // Mobile number validation
+      const mobile = document.getElementById("mobile").value.trim();
+      const mobilePattern = /^[0-9]{10}$/;
+      if (mobile === "") {
+        document.getElementById("mobileError").textContent = "Mobile number is required.";
+        isValid = false;
+      } else if (!mobilePattern.test(mobile)) {
+        document.getElementById("mobileError").textContent = "Invalid mobile number format.";
+        isValid = false;
+      }
+
+      // Age validation
+      const age = document.getElementById("age").value.trim();
+      if (age === "") {
+        document.getElementById("ageError").textContent = "Age is required.";
+        isValid = false;
+      } else if (isNaN(age) || age <= 0) {
+        document.getElementById("ageError").textContent = "Invalid age.";
+        isValid = false;
+      }
+
+      // Departure date validation
+      const departure = document.getElementById("departure").value.trim();
+      if (departure === "") {
+        document.getElementById("departureError").textContent = "Departure date is required.";
+        isValid = false;
+      }
+
+
+      // Destination validation
+      const destination = document.getElementById("destination").value.trim();
+      if (destination === "") {
+        document.getElementById("destinationError").textContent = "Destination is required.";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Form submitted successfully!");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
